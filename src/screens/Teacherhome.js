@@ -1,4 +1,4 @@
-import { View, Text, Image, LogBox } from "react-native";
+import { View, Text, Image, LogBox, FlatList } from "react-native";
 import { useState, useEffect } from "react";
 import * as SecureStore from "expo-secure-store";
 import styles from "../styles/home";
@@ -44,6 +44,7 @@ export default function Teacherhome({ navigation }) {
           </View>
         </View>
       </View>
+
       <View
         style={{
           marginTop: "25%",
@@ -55,6 +56,12 @@ export default function Teacherhome({ navigation }) {
           flexWrap: "wrap",
         }}
       >
+        <NavItem
+          img={require("../../assets/Create.png")}
+          title="List Class"
+          navigation={navigation}
+          path="ListClass"
+        />
         <NavItem
           img={require("../../assets/Create.png")}
           title="Take attendance"

@@ -13,6 +13,8 @@ import PreviousNotices from "./src/screens/PreviousNotices";
 import LeaveAppeals from "./src/screens/BrowseLeaveAppeals";
 import AppealLeave from "./src/screens/AppealLeave";
 import AttendanceRecord from "./src/screens/AttendanceRecord";
+import ListClass from "./src/screens/ListClass";
+import Attendance from "./src/screens/Attendance";
 import * as SecureStore from "expo-secure-store";
 
 import Attendanceinfo from "./src/screens/Attendanceinfo";
@@ -50,12 +52,7 @@ export default function App() {
   useEffect(() => {
     getToken();
     let today = new Date();
-    let date =
-      today.getFullYear() +
-      "-" +
-      (today.getMonth() + 1) +
-      "-" +
-      today.getDate();
+    let date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
     setDate(date);
   }, []);
   let [fontsLoaded] = useFonts({
@@ -118,6 +115,28 @@ export default function App() {
           component={Parenthome}
           options={{
             headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="ListClass"
+          component={ListClass}
+          options={{
+            title: "List Class",
+            headerStyle: {
+              backgroundColor: colors.primary,
+            },
+            headerTintColor: colors.white,
+          }}
+        />
+        <Stack.Screen
+          name="Attendace"
+          component={Attendance}
+          options={{
+            title: "Attendace",
+            headerStyle: {
+              backgroundColor: colors.primary,
+            },
+            headerTintColor: colors.white,
           }}
         />
 
