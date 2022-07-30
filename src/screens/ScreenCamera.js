@@ -4,7 +4,7 @@ import { Camera, CameraType } from "expo-camera";
 
 function ScreenCamera() {
   const [hasPermission, setHasPermission] = useState(null);
-  const [type, setType] = useState(CameraType.back);
+  const [type, setType] = useState(Camera.Constants.Type.back);
 
   useEffect(() => {
     (async () => {
@@ -26,7 +26,11 @@ function ScreenCamera() {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              setType(type === CameraType.back ? CameraType.front : CameraType.back);
+              setType(
+                type === Camera.Constants.Type.back
+                  ? Camera.Constants.Type.front
+                  : Camera.Constants.Type.back
+              );
             }}
           >
             <Text style={styles.text}> Flip </Text>
