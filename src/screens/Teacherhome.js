@@ -1,4 +1,4 @@
-import { View, Text, Image, LogBox, FlatList } from "react-native";
+import { View, Text, Image, LogBox, FlatList, Pressable } from "react-native";
 import { useState, useEffect } from "react";
 import * as SecureStore from "expo-secure-store";
 import styles from "../styles/home";

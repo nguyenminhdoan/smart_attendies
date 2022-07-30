@@ -1,5 +1,5 @@
-import { View, Text, Button } from "react-native";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { View, Text, Button, Pressable } from "react-native";
 import styles from "../styles/attendace";
 import colors from "../../config/colors";
 import moment from "moment";
@@ -9,6 +9,10 @@ import ListStudent from "../components/ListStudent";
 // import RNPickerSelect from "react-native-picker-select";
 // import RNDateTimePicker from "@react-native-community/datetimepicker";
 // import DateTimePickerModal from "react-native-modal-datetime-picker";
+
+// import ReactNativeBiometrics, { BiometryTypes } from "react-native-biometrics";
+import { Feather } from "@expo/vector-icons";
+import { Camera, CameraType } from "expo-camera";
 
 const Attendance = ({ navigation, route }) => {
   const [classofweek, setClassofweek] = useState();
@@ -26,7 +30,22 @@ const Attendance = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 20, margin: 10 }}>{classofweek?.title}</Text>
+      <View style={{ flexDirection: "row", margin: 10, justifyContent: "space-between" }}>
+        <Text style={{ fontSize: 18 }}>{classofweek?.title}</Text>
+
+        <Pressable
+          style={{
+            right: 20,
+            backgroundColor: colors.parentHome,
+            width: "10%",
+            height: 28,
+            borderRadius: 15,
+          }}
+          onPress={() => navigation.navigate("ScreenCamera")}
+        >
+          <Feather name="camera" size={24} color="black" style={{ textAlign: "center" }} />
+        </Pressable>
+      </View>
 
       <View style={{ marginTop: 30, marginLeft: 20 }}>
         <View style={{ flexDirection: "row" }}>
@@ -73,6 +92,8 @@ const Attendance = ({ navigation, route }) => {
         </View>
 
         <View style={{ flexDirection: "column" }}>
+          <ListStudent />
+          <ListStudent />
           <ListStudent />
         </View>
       </View>

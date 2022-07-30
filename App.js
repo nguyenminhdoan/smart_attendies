@@ -16,6 +16,7 @@ import AttendanceRecord from "./src/screens/AttendanceRecord";
 import ListClass from "./src/screens/ListClass";
 import Attendance from "./src/screens/Attendance";
 import * as SecureStore from "expo-secure-store";
+import ScreenCamera from "./src/screens/ScreenCamera";
 
 import Attendanceinfo from "./src/screens/Attendanceinfo";
 import {
@@ -137,6 +138,13 @@ export default function App() {
               backgroundColor: colors.primary,
             },
             headerTintColor: colors.white,
+          }}
+        />
+        <Stack.Screen
+          name="ScreenCamera"
+          component={ScreenCamera}
+          options={{
+            headerShown: false,
           }}
         />
 
