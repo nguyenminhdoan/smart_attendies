@@ -28,14 +28,14 @@ const NavItem = ({ navigation, img, title, path, routeParams }) => {
           source={require("../../assets/arrow.png")}
         />
       </View> */}
-      <Animatable.View animation={"pulse"} duration={2000} delay={300}>
+      <Animatable.View animation={"rubberBand"} duration={2500} delay={300}>
         <View
           style={{
             width: Dimensions.get("window").width / 2 - 16,
             backgroundColor: "white",
             margin: 8,
-            borderRadius: 10,
-            shadowOpacity: 0.3,
+            borderRadius: 20,
+            shadowOpacity: 0.4,
             shadowOffset: { width: 1, height: 2 },
           }}
         >
@@ -59,7 +59,14 @@ const NavItem = ({ navigation, img, title, path, routeParams }) => {
                 }}
               >
                 <Image style={[styles.icon, { marginTop: 65 }]} source={img} />
-                <Text style={{ fontWeight: "bold", fontSize: 13, color: "black", paddingTop: 40 }}>
+                <Text
+                  style={{
+                    fontFamily: "Roboto-Bold",
+                    fontSize: 15,
+                    color: colors.navi,
+                    paddingTop: 30,
+                  }}
+                >
                   {title}
                 </Text>
               </View>

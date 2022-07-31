@@ -27,14 +27,29 @@ const ListClass = ({ navigation }) => {
     <SafeAreaView style={styles.main}>
       <View style={styles.container}>
         <View style={styles.listclass}>
-          <Text style={{ color: colors.primary, marginTop: "auto", marginBottom: "auto" }}>
+          <Text
+            style={{
+              color: colors.primary,
+              marginTop: "auto",
+              marginBottom: "auto",
+              fontFamily: "Roboto-Medium",
+            }}
+          >
             List Class of Week
           </Text>
         </View>
 
         <View style={{ flexDirection: "column" }}>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <Text style={{ marginLeft: 20, color: colors.gray }}>Cerrent Week</Text>
+            <Text
+              style={{
+                marginLeft: 20,
+                color: colors.gray,
+                fontFamily: "Roboto-Regular",
+              }}
+            >
+              Cerrent Week
+            </Text>
             <View style={{ backgroundColor: colors.gray, height: 0.1, width: 250 }} />
           </View>
 

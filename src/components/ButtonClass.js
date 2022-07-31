@@ -5,9 +5,9 @@ import * as Animatable from "react-native-animatable";
 const ButtonClass = ({ navigation, title, major, attend, date }) => {
   return (
     <Animatable.View
-      animation={"bounceInLeft"}
+      animation={"fadeInDown"}
       delay={100}
-      duration={2000}
+      duration={2500}
       style={{ marginLeft: 20 }}
     >
       <TouchableOpacity
@@ -32,17 +32,26 @@ const ButtonClass = ({ navigation, title, major, attend, date }) => {
           }}
         >
           <View style={{ margin: 10 }}>
-            <Text style={{ fontWeight: "bold", fontSize: 16 }}>{title}</Text>
-            <Text style={{ fontSize: 13, color: colors.gray, marginTop: 5 }}>{major}</Text>
+            <Text style={{ fontFamily: "Roboto-Medium", fontSize: 16 }}>{title}</Text>
+            <Text
+              style={{
+                fontSize: 13,
+                color: colors.gray,
+                marginTop: 5,
+                fontFamily: "Roboto-Regular",
+              }}
+            >
+              {major}
+            </Text>
             <View
               style={{ backgroundColor: colors.gray, height: 0.3, width: 320, marginTop: 10 }}
             />
 
             <View style={{ marginTop: 4, flexDirection: "row" }}>
               {attend == true ? (
-                <Text style={{ color: colors.green }}>✓ Marked</Text>
+                <Text style={{ color: colors.green, fontFamily: "Roboto-Regular" }}>✓ Marked</Text>
               ) : (
-                <Text style={{ color: colors.green }}></Text>
+                <Text style={{ color: colors.green, fontFamily: "Roboto-Regular" }}></Text>
               )}
 
               <View
@@ -54,7 +63,7 @@ const ButtonClass = ({ navigation, title, major, attend, date }) => {
                   alignItems: "center",
                 }}
               >
-                <Text style={{ color: colors.white }}>{date}</Text>
+                <Text style={{ color: colors.white, fontFamily: "Roboto-Medium" }}>{date}</Text>
               </View>
             </View>
           </View>

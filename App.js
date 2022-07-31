@@ -62,6 +62,10 @@ export default function App() {
     Poppins_100Thin,
     Poppins_400Regular,
     Poppins_300Light,
+    "Roboto-Black": require("./assets/fonts/Roboto-Black.ttf"),
+    "Roboto-Bold": require("./assets/fonts/Roboto-Bold.ttf"),
+    "Roboto-Regular": require("./assets/fonts/Roboto-Regular.ttf"),
+    "Roboto-Medium": require("./assets/fonts/Roboto-Medium.ttf"),
   });
   if (!fontsLoaded) {
     return <AppLoading />;

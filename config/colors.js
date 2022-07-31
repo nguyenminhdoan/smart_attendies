@@ -4,6 +4,7 @@ export default {
   primary: "#0991F6",
   white: "#fff",
   black: "#000",
+  navi: "#18283F",
   shadow: "#666",
   parentHome: "#0991F6",
   green: "#60C9C5",
@@ -11,6 +12,8 @@ export default {
   red: "#F76D23",
   lightBlack: "#2F2E41",
   gray: "#848C99",
+  green: "#60C9C5",
+
   lightPrimary: "rgba(9, 145, 246, 0.25)",
   lightGreen: "rgba(46, 205, 110, 0.5)",
   lightRed: "rgba(247, 109, 35, 0.5)",

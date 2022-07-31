@@ -31,19 +31,36 @@ const Attendance = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: "row", margin: 10, justifyContent: "space-between" }}>
-        <Text style={{ fontSize: 18 }}>{classofweek?.title}</Text>
+        <Text
+          style={{
+            fontSize: 18,
+            color: colors.primary,
+            fontFamily: "Roboto-Bold",
+          }}
+        >
+          Class: {classofweek?.title}
+        </Text>
 
         <Pressable
           style={{
-            right: 20,
-            backgroundColor: colors.parentHome,
+            right: "50%",
+            backgroundColor: "red",
             width: "10%",
-            height: 28,
-            borderRadius: 15,
+            height: 40,
+            borderRadius: "50%",
           }}
           onPress={() => navigation.navigate("ScreenCamera")}
         >
-          <Feather name="camera" size={24} color="black" style={{ textAlign: "center" }} />
+          <View
+            style={{
+              textAlign: "center",
+              alignItems: "center",
+              marginTop: "auto",
+              marginBottom: "auto",
+            }}
+          >
+            <Feather name="camera" size={24} color="white" />
+          </View>
         </Pressable>
       </View>
 
@@ -75,9 +92,11 @@ const Attendance = ({ navigation, route }) => {
               placeholderText: {
                 fontSize: 17,
                 color: "gray",
+                fontFamily: "Roboto-Regular",
               },
               dateText: {
                 fontSize: 17,
+                fontFamily: "Roboto-Medium",
               },
             }}
             onDateChange={(date) => {
@@ -86,8 +105,10 @@ const Attendance = ({ navigation, route }) => {
           />
 
           <View style={{ flexDirection: "column", marginTop: 3, paddingLeft: 90 }}>
-            <Text style={{ fontSize: 16 }}>Total Sytudens</Text>
-            <Text style={{ textAlign: "center", fontSize: 16, fontWeight: "bold" }}>45</Text>
+            <Text style={{ fontSize: 16, fontFamily: "Roboto-Medium" }}>Total Sytudens</Text>
+            <Text style={{ textAlign: "center", fontSize: 16, fontFamily: "Roboto-Medium" }}>
+              45
+            </Text>
           </View>
         </View>
 
