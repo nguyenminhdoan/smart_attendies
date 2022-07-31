@@ -32,7 +32,7 @@ const ListClass = ({ navigation }) => {
               color: colors.primary,
               marginTop: "auto",
               marginBottom: "auto",
-              fontFamily: "Roboto-Medium",
+              fontFamily: "Poppins-Medium",
             }}
           >
             List Class of Week
@@ -45,7 +45,7 @@ const ListClass = ({ navigation }) => {
               style={{
                 marginLeft: 20,
                 color: colors.gray,
-                fontFamily: "Roboto-Regular",
+                fontFamily: "Poppins-Regular",
               }}
             >
               Cerrent Week

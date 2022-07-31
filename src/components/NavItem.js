@@ -31,9 +31,9 @@ const NavItem = ({ navigation, img, title, path, routeParams }) => {
       <Animatable.View animation={"rubberBand"} duration={2500} delay={300}>
         <View
           style={{
-            width: Dimensions.get("window").width / 2 - 16,
+            width: Dimensions.get("window").width / 2 - 22,
             backgroundColor: "white",
-            margin: 8,
+            margin: 5,
             borderRadius: 20,
             shadowOpacity: 0.4,
             shadowOffset: { width: 1, height: 2 },
@@ -42,7 +42,7 @@ const NavItem = ({ navigation, img, title, path, routeParams }) => {
           <View
             style={{
               height: 160,
-              margin: 2,
+              margin: 5,
               borderRadius: 25,
               // backgroundColor: colors.primary,
             }}
@@ -58,13 +58,16 @@ const NavItem = ({ navigation, img, title, path, routeParams }) => {
                   alignItems: "center",
                 }}
               >
-                <Image style={[styles.icon, { marginTop: 65 }]} source={img} />
+                <View style={{ marginTop: 30 }}>
+                  <Image style={[styles.icon]} source={img} />
+                </View>
+
                 <Text
                   style={{
-                    fontFamily: "Roboto-Bold",
-                    fontSize: 15,
+                    fontFamily: "Poppins-Blod",
+                    fontSize: 12,
                     color: colors.navi,
-                    paddingTop: 30,
+                    paddingTop: 15,
                   }}
                 >
                   {title}

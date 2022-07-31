@@ -9,14 +9,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   navinfo: {
-    fontFamily: "Poppins_500Medium",
+    fontFamily: "Poppins-Medium",
     fontSize: 15,
     marginLeft: 15,
     flex: 1,
   },
   icon: {
-    height: 30,
-    width: 30,
+    width: 80,
+    height: 80,
   },
   iconarr: {
     height: 20,

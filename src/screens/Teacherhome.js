@@ -1,4 +1,4 @@
-import { View, Text, Image, LogBox, FlatList, Pressable } from "react-native";
+import { View, Text, Image, LogBox, FlatList, Pressable, ScrollView } from "react-native";
 import { useState, useEffect } from "react";
 import * as SecureStore from "expo-secure-store";
 import styles from "../styles/home";
@@ -28,7 +28,7 @@ export default function Teacherhome({ navigation }) {
 
   return (
     <View style={styles.main}>
-      <View style={[styles.container, { height: 175 }]}>
+      <View style={[styles.container, { height: 160 }]}>
         <View style={styles.infobox}>
           <View style={styles.imgbox}>
             <Image
@@ -45,54 +45,59 @@ export default function Teacherhome({ navigation }) {
         </View>
       </View>
 
-      <View
-        style={{
-          marginTop: "25%",
-          display: "flex",
-          flexDirection: "row",
-          // justifyContent: "space-around",
-          // flex: 1,
-          alignItems: "center",
-          flexWrap: "wrap",
-        }}
-      >
-        <NavItem
-          img={require("../../assets/Create.png")}
-          title="List Class"
-          navigation={navigation}
-          path="ListClass"
-        />
-        <NavItem
-          img={require("../../assets/Create.png")}
-          title="Take attendance"
-          navigation={navigation}
-          path="Attendance"
-        />
-        <NavItem
-          img={require("../../assets/activity.png")}
-          title="Attendance record"
-          navigation={navigation}
-          path="Attendancerecord"
-        />
-        <NavItem
-          img={require("../../assets/plus.png")}
-          title="Create notice"
-          navigation={navigation}
-          path="CreateNotice"
-        />
-        <NavItem
-          img={require("../../assets/paper.png")}
-          title="Previous notices"
-          navigation={navigation}
-          path="PreviousNotices"
-        />
-        <NavItem
-          img={require("../../assets/ereader.png")}
-          title="Browse leave appeals"
-          navigation={navigation}
-          path="BrowseLeaveAppeals"
-        />
-      </View>
+      <ScrollView>
+        <View
+          style={{
+            marginTop: "25%",
+            display: "flex",
+            flexDirection: "row",
+            // justifyContent: "space-around",
+            // flex: 1,
+            alignItems: "center",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          <NavItem
+            img={require("../../assets/icon/class-icon.png")}
+            title="List Class"
+            navigation={navigation}
+            path="ListClass"
+          />
+
+          <NavItem
+            img={require("../../assets/icon/timetable3.png")}
+            title="Time Table"
+            navigation={navigation}
+            path="TimeTable"
+          />
+          <NavItem
+            img={require("../../assets/icon/take-attendance.png")}
+            title="Take attendance"
+            navigation={navigation}
+            path="Attendance"
+          />
+          <NavItem
+            img={require("../../assets/icon/notice-icon.png")}
+            title="Create notice"
+            navigation={navigation}
+            path="CreateNotice"
+          />
+          <NavItem
+            img={require("../../assets/icon/record-icon.png")}
+            title="Attendance record"
+            navigation={navigation}
+            path="Attendancerecord"
+          />
+
+          {/* <NavItem
+            img={require("../../assets/paper.png")}
+            title="Previous notices"
+            navigation={navigation}
+            path="PreviousNotices"
+          /> */}
+        </View>
+      </ScrollView>
 
       <Logout navigation={navigation} />
     </View>
