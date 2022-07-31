@@ -60,6 +60,7 @@ const Profile = () => {
           placeholder="Student ID"
           placeholderTextColor="gray"
           style={styles.input}
+          editable={false}
         />
       </View>
 
@@ -75,6 +76,7 @@ const Profile = () => {
           placeholder="Full name"
           placeholderTextColor="gray"
           style={styles.input}
+          editable={false}
         />
       </View>
 
@@ -90,6 +92,7 @@ const Profile = () => {
           placeholder="Age"
           placeholderTextColor="gray"
           style={styles.input}
+          editable={false}
         />
       </View>
 
@@ -105,6 +108,7 @@ const Profile = () => {
           placeholder="Phone number"
           placeholderTextColor="gray"
           style={styles.input}
+          editable={false}
         />
       </View>
 
@@ -120,6 +124,7 @@ const Profile = () => {
           placeholder="Email"
           placeholderTextColor="gray"
           style={styles.input}
+          editable={false}
         />
       </View>
     </SafeAreaView>
