@@ -17,6 +17,9 @@ import ListClass from "./src/screens/ListClass";
 import Attendance from "./src/screens/Attendance";
 import * as SecureStore from "expo-secure-store";
 import ScreenCamera from "./src/screens/ScreenCamera";
+import History from "./src/screens/History";
+import StudentRegister from "./src/screens/StudentRegister";
+import StudentProfile from "./src/screens/StudentProfile";
 
 import Attendanceinfo from "./src/screens/Attendanceinfo";
 import {
@@ -28,6 +31,7 @@ import {
   Poppins_300Light,
 } from "@expo-google-fonts/poppins";
 import AppLoading from "expo-app-loading";
+import { ScrollView } from "react-native";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -53,7 +57,12 @@ export default function App() {
   useEffect(() => {
     getToken();
     let today = new Date();
-    let date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+    let date =
+      today.getFullYear() +
+      "-" +
+      (today.getMonth() + 1) +
+      "-" +
+      today.getDate();
     setDate(date);
   }, []);
   let [fontsLoaded] = useFonts({
@@ -129,6 +138,42 @@ export default function App() {
             headerTintColor: colors.white,
           }}
         />
+        <Stack.Screen
+          name="History"
+          component={History}
+          options={{
+            title: "History",
+            headerStyle: {
+              backgroundColor: colors.primary,
+            },
+            headerTintColor: colors.white,
+          }}
+        />
+
+        <Stack.Screen
+          name="StudentRegister"
+          component={StudentRegister}
+          options={{
+            title: "Student Register",
+            headerStyle: {
+              backgroundColor: colors.primary,
+            },
+            headerTintColor: colors.white,
+          }}
+        />
+
+        <Stack.Screen
+          name="StudentProfile"
+          component={StudentProfile}
+          options={{
+            title: "Student Profile",
+            headerStyle: {
+              backgroundColor: colors.primary,
+            },
+            headerTintColor: colors.white,
+          }}
+        />
+
         <Stack.Screen
           name="Attendace"
           component={Attendance}

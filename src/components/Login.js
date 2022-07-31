@@ -70,7 +70,10 @@ const Login = ({ navigation, role }) => {
     navigation.reset({
       index: 0,
       // routes: [{ name: `${role === "parent" ? "Parenthome" : "Teacherhome"}` }],
-      routes: [{ name: "Teacherhome" }],
+      routes: [
+        { name: `${role === "parent" ? "Parenthome" : "Teacherhome"}` },
+      ],
+      // routes: [{ name: "Teacherhome" }],
     });
   };
 
