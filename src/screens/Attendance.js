@@ -33,9 +33,9 @@ const Attendance = ({ navigation, route }) => {
       <View style={{ flexDirection: "row", margin: 10, justifyContent: "space-between" }}>
         <Text
           style={{
-            fontSize: 18,
+            fontSize: 15,
             color: colors.primary,
-            fontFamily: "Roboto-Bold",
+            fontFamily: "Poppins-Blod",
           }}
         >
           Class: {classofweek?.title}
@@ -92,11 +92,11 @@ const Attendance = ({ navigation, route }) => {
               placeholderText: {
                 fontSize: 17,
                 color: "gray",
-                fontFamily: "Roboto-Regular",
+                fontFamily: "Poppins-Regular",
               },
               dateText: {
                 fontSize: 17,
-                fontFamily: "Roboto-Medium",
+                fontFamily: "Poppins-Medium",
               },
             }}
             onDateChange={(date) => {
@@ -105,8 +105,8 @@ const Attendance = ({ navigation, route }) => {
           />
 
           <View style={{ flexDirection: "column", marginTop: 3, paddingLeft: 90 }}>
-            <Text style={{ fontSize: 16, fontFamily: "Roboto-Medium" }}>Total Sytudens</Text>
-            <Text style={{ textAlign: "center", fontSize: 16, fontFamily: "Roboto-Medium" }}>
+            <Text style={{ fontSize: 13, fontFamily: "Poppins-Medium" }}>Total Sytudens</Text>
+            <Text style={{ textAlign: "center", fontSize: 13, fontFamily: "Poppins-Medium" }}>
               45
             </Text>
           </View>

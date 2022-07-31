@@ -32,13 +32,13 @@ const ButtonClass = ({ navigation, title, major, attend, date }) => {
           }}
         >
           <View style={{ margin: 10 }}>
-            <Text style={{ fontFamily: "Roboto-Medium", fontSize: 16 }}>{title}</Text>
+            <Text style={{ fontFamily: "Poppins-Medium", fontSize: 15 }}>{title}</Text>
             <Text
               style={{
                 fontSize: 13,
                 color: colors.gray,
                 marginTop: 5,
-                fontFamily: "Roboto-Regular",
+                fontFamily: "Poppins-Regular",
               }}
             >
               {major}
@@ -49,9 +49,9 @@ const ButtonClass = ({ navigation, title, major, attend, date }) => {
 
             <View style={{ marginTop: 4, flexDirection: "row" }}>
               {attend == true ? (
-                <Text style={{ color: colors.green, fontFamily: "Roboto-Regular" }}>✓ Marked</Text>
+                <Text style={{ color: colors.green, fontFamily: "Poppins-Regular" }}>✓ Marked</Text>
               ) : (
-                <Text style={{ color: colors.green, fontFamily: "Roboto-Regular" }}></Text>
+                <Text style={{ color: colors.green, fontFamily: "Poppins-Regular" }}></Text>
               )}
 
               <View
@@ -63,7 +63,9 @@ const ButtonClass = ({ navigation, title, major, attend, date }) => {
                   alignItems: "center",
                 }}
               >
-                <Text style={{ color: colors.white, fontFamily: "Roboto-Medium" }}>{date}</Text>
+                <Text style={{ color: colors.white, fontFamily: "Poppins-Medium", fontSize: 13 }}>
+                  {date}
+                </Text>
               </View>
             </View>
           </View>

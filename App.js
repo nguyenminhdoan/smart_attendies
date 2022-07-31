@@ -18,6 +18,8 @@ import Attendance from "./src/screens/Attendance";
 import * as SecureStore from "expo-secure-store";
 import ScreenCamera from "./src/screens/ScreenCamera";
 
+import TimeTable from "./src/screens/TimeTable";
+
 import Attendanceinfo from "./src/screens/Attendanceinfo";
 import {
   useFonts,
@@ -66,6 +68,11 @@ export default function App() {
     "Roboto-Bold": require("./assets/fonts/Roboto-Bold.ttf"),
     "Roboto-Regular": require("./assets/fonts/Roboto-Regular.ttf"),
     "Roboto-Medium": require("./assets/fonts/Roboto-Medium.ttf"),
+
+    "Poppins-Blod": require("./assets/fonts/Poppins-Bold.ttf"),
+    "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+    "Poppins-Medium": require("./assets/fonts/Poppins-Medium.ttf"),
+    "Poppins-Black": require("./assets/fonts/Poppins-Black.ttf"),
   });
   if (!fontsLoaded) {
     return <AppLoading />;
@@ -79,9 +86,13 @@ export default function App() {
           options={{
             title: "Attendance: " + date,
             headerStyle: {
-              backgroundColor: colors.primary,
+              backgroundColor: colors.white,
             },
-            headerTintColor: colors.white,
+            headerTintColor: colors.navi,
+            headerTitleStyle: {
+              fontFamily: "Poppins-Blod",
+              fontSize: 20,
+            },
           }}
         />
 
@@ -122,15 +133,21 @@ export default function App() {
             headerShown: false,
           }}
         />
+
+        {/* List button in screen Teacherhome */}
         <Stack.Screen
           name="ListClass"
           component={ListClass}
           options={{
             title: "List Class",
             headerStyle: {
-              backgroundColor: colors.primary,
+              backgroundColor: colors.white,
             },
-            headerTintColor: colors.white,
+            headerTintColor: colors.navi,
+            headerTitleStyle: {
+              fontFamily: "Poppins-Blod",
+              fontSize: 20,
+            },
           }}
         />
         <Stack.Screen
@@ -138,10 +155,15 @@ export default function App() {
           component={Attendance}
           options={{
             title: "Attendace",
+
             headerStyle: {
-              backgroundColor: colors.primary,
+              backgroundColor: colors.white,
             },
-            headerTintColor: colors.white,
+            headerTintColor: colors.navi,
+            headerTitleStyle: {
+              fontFamily: "Poppins-Blod",
+              fontSize: 20,
+            },
           }}
         />
         <Stack.Screen
@@ -158,9 +180,13 @@ export default function App() {
           options={{
             title: "Attendance record",
             headerStyle: {
-              backgroundColor: colors.primary,
+              backgroundColor: colors.white,
             },
-            headerTintColor: colors.white,
+            headerTintColor: colors.navi,
+            headerTitleStyle: {
+              fontFamily: "Poppins-Blod",
+              fontSize: 20,
+            },
           }}
         />
         <Stack.Screen
@@ -169,9 +195,13 @@ export default function App() {
           options={{
             title: "Create Notice",
             headerStyle: {
-              backgroundColor: colors.primary,
+              backgroundColor: colors.white,
             },
-            headerTintColor: colors.white,
+            headerTintColor: colors.navi,
+            headerTitleStyle: {
+              fontFamily: "Poppins-Blod",
+              fontSize: 20,
+            },
           }}
         />
         <Stack.Screen
@@ -180,9 +210,13 @@ export default function App() {
           options={{
             title: "Previous Notices",
             headerStyle: {
-              backgroundColor: colors.primary,
+              backgroundColor: colors.white,
             },
-            headerTintColor: colors.white,
+            headerTintColor: colors.navi,
+            headerTitleStyle: {
+              fontFamily: "Poppins-Blod",
+              fontSize: 20,
+            },
           }}
         />
         <Stack.Screen
@@ -191,20 +225,45 @@ export default function App() {
           options={{
             title: "Leave Appeals",
             headerStyle: {
-              backgroundColor: colors.primary,
+              backgroundColor: colors.white,
             },
-            headerTintColor: colors.white,
+            headerTintColor: colors.navi,
+            headerTitleStyle: {
+              fontFamily: "Poppins-Blod",
+              fontSize: 20,
+            },
           }}
         />
+
+        <Stack.Screen
+          name="TimeTable"
+          component={TimeTable}
+          options={{
+            title: "TimeTable",
+            headerStyle: {
+              backgroundColor: colors.white,
+            },
+            headerTintColor: colors.navi,
+            headerTitleStyle: {
+              fontFamily: "Poppins-Blod",
+              fontSize: 20,
+            },
+          }}
+        />
+
         <Stack.Screen
           name="AppealLeave"
           component={AppealLeave}
           options={{
             title: "Appeal leave",
             headerStyle: {
-              backgroundColor: colors.primary,
+              backgroundColor: colors.white,
             },
-            headerTintColor: colors.white,
+            headerTintColor: colors.navi,
+            headerTitleStyle: {
+              fontFamily: "Poppins-Blod",
+              fontSize: 20,
+            },
           }}
         />
         <Stack.Screen

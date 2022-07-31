@@ -23,13 +23,13 @@ const ListStudent = ({ onPress }) => {
           <Image source={require("../components/profile.png")} />
         </View>
         <View style={{ flexDirection: "column", marginLeft: 5 }}>
-          <Text style={{ color: colors.parentHome, fontFamily: "Roboto-Regular" }}>
+          <Text style={{ color: colors.parentHome, fontFamily: "Poppins-Regular" }}>
             List Student
           </Text>
-          <Text style={{ fontSize: 12, marginTop: 5, fontFamily: "Roboto-Regular" }}>
+          <Text style={{ fontSize: 10, marginTop: 3, fontFamily: "Poppins-Regular" }}>
             124123123
           </Text>
-          <Text style={{ marginTop: 5, fontSize: 12, fontFamily: "Roboto-Regular" }}>
+          <Text style={{ marginTop: 3, fontSize: 10, fontFamily: "Poppins-Regular" }}>
             UI/UX Desinger
           </Text>
         </View>
@@ -84,12 +84,12 @@ const styles = StyleSheet.create({
     letterSpacing: 0.25,
     color: "white",
     position: "absolute",
-    fontFamily: "Roboto-Bold",
+    fontFamily: "Poppins-Blod",
   },
 
   texttime: {
     fontSize: 12,
     textAlign: "center",
-    fontFamily: "Roboto-Regular",
+    fontFamily: "Poppins-Regular",
   },
 });

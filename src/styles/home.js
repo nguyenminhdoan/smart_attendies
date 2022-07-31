@@ -46,10 +46,10 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 25,
-    fontFamily: "Poppins_500Medium",
+    fontFamily: "Poppins-Medium",
   },
   address: {
-    fontFamily: "Poppins_400Regular",
+    fontFamily: "Poppins-Regular",
     fontSize: 15,
     color: colors.primary,
     marginTop: -5,
@@ -63,12 +63,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   head: {
-    fontFamily: "Poppins_500Medium",
+    fontFamily: "Poppins-Medium",
     color: colors.black,
     opacity: 0.6,
   },
   no: {
-    fontFamily: "Poppins_500Medium",
+    fontFamily: "Poppins-Medium",
     opacity: 0.7,
     fontSize: 20,
     marginTop: -5,
