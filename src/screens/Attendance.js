@@ -30,7 +30,13 @@ const Attendance = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: "row", margin: 10, justifyContent: "space-between" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          margin: 10,
+          justifyContent: "space-between",
+        }}
+      >
         <Text
           style={{
             fontSize: 15,
@@ -44,9 +50,8 @@ const Attendance = ({ navigation, route }) => {
         <Pressable
           style={{
             right: "50%",
-            backgroundColor: "red",
-            width: "10%",
-            height: 40,
+            backgroundColor: "#C81A15",
+            padding: 15,
             borderRadius: "50%",
           }}
           onPress={() => navigation.navigate("ScreenCamera")}
@@ -59,7 +64,7 @@ const Attendance = ({ navigation, route }) => {
               marginBottom: "auto",
             }}
           >
-            <Feather name="camera" size={24} color="white" />
+            <Feather name="camera" size={30} color="white" />
           </View>
         </Pressable>
       </View>
@@ -104,10 +109,20 @@ const Attendance = ({ navigation, route }) => {
             }}
           />
 
-          <View style={{ flexDirection: "column", marginTop: 3, paddingLeft: 90 }}>
-            <Text style={{ fontSize: 13, fontFamily: "Poppins-Medium" }}>Total Sytudens</Text>
-            <Text style={{ textAlign: "center", fontSize: 13, fontFamily: "Poppins-Medium" }}>
-              45
+          <View
+            style={{ flexDirection: "column", marginTop: 3, paddingLeft: 90 }}
+          >
+            <Text style={{ fontSize: 13, fontFamily: "Poppins-Medium" }}>
+              Total Students
+            </Text>
+            <Text
+              style={{
+                textAlign: "center",
+                fontSize: 13,
+                fontFamily: "Poppins-Medium",
+              }}
+            >
+              3
             </Text>
           </View>
         </View>

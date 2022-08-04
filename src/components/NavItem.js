@@ -1,4 +1,10 @@
-import { Text, View, TouchableNativeFeedback, Image, Dimensions } from "react-native";
+import {
+  Text,
+  View,
+  TouchableNativeFeedback,
+  Image,
+  Dimensions,
+} from "react-native";
 import styles from "../styles/nav_item";
 import colors from "../../config/colors";
 import * as Animatable from "react-native-animatable";
@@ -19,7 +25,9 @@ const bgColor = (i) => colorAr[i % colorAr.length];
 
 const NavItem = ({ navigation, img, title, path, routeParams }) => {
   return (
-    <TouchableNativeFeedback onPress={() => navigation.navigate(path, { ...routeParams })}>
+    <TouchableNativeFeedback
+      onPress={() => navigation.navigate(path, { ...routeParams })}
+    >
       {/* <View style={styles.nav}>
         <Image style={styles.icon} source={img} />
         <Text style={styles.navinfo}>{title}</Text>
@@ -41,9 +49,10 @@ const NavItem = ({ navigation, img, title, path, routeParams }) => {
         >
           <View
             style={{
-              height: 160,
+              minHeight: 160,
               margin: 5,
               borderRadius: 25,
+              width: "auto",
               // backgroundColor: colors.primary,
             }}
           >
@@ -65,12 +74,21 @@ const NavItem = ({ navigation, img, title, path, routeParams }) => {
                 <Text
                   style={{
                     fontFamily: "Poppins-Blod",
-                    fontSize: 12,
+                    fontSize: 13,
                     color: colors.navi,
                     paddingTop: 15,
                   }}
                 >
-                  {title}
+                  <Text
+                    style={{
+                      fontSize: 13,
+                      fontFamily: "Poppins-Black",
+                      color: colors.navi,
+                    }}
+                  >
+                    {" "}
+                    {title}
+                  </Text>
                 </Text>
               </View>
             </View>

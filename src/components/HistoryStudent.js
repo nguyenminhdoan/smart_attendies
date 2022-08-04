@@ -1,7 +1,15 @@
-import { Text, View, Image, Button, TouchableOpacity, Pressable, StyleSheet } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  Button,
+  TouchableOpacity,
+  Pressable,
+  StyleSheet,
+} from "react-native";
 import colors from "../../config/colors";
 
-const HistoryStudent = ({onPress}) => {
+const HistoryStudent = ({ onPress }) => {
   return (
     <View
       style={{
@@ -15,7 +23,7 @@ const HistoryStudent = ({onPress}) => {
       }}
     >
       <View style={{ flexDirection: "row", marginTop: 20 }}>
-        <View style={{paddingRight: 5}}>
+        <View style={{ paddingRight: 5 }}>
           <Image source={require("../components/profile.png")} />
         </View>
         <View style={{ flexDirection: "column", marginLeft: 5 }}>
@@ -33,17 +41,30 @@ const HistoryStudent = ({onPress}) => {
           }}
         />
 
-        <View style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}>
+        <View
+          style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}
+        >
           <View style={{ marginRight: 10 }}>
-            <Text style={{ fontSize: 10, textAlign: "center" , paddingBottom: 5 }}>09:00:00</Text>
+            <Text
+              style={{ fontSize: 10, textAlign: "center", paddingBottom: 5 }}
+            >
+              09:00:00
+            </Text>
             <Pressable style={styles.button} onPress={onPress}>
               <Text style={styles.text}>In Time</Text>
             </Pressable>
           </View>
 
           <View>
-            <Text style={{ fontSize: 10, textAlign: "center" , paddingBottom: 5 }}>17:09:38</Text>
-            <Pressable style={[styles.button, { backgroundColor: "red" }]} onPress={onPress}>
+            <Text
+              style={{ fontSize: 10, textAlign: "center", paddingBottom: 5 }}
+            >
+              17:09:38
+            </Text>
+            <Pressable
+              style={[styles.button, { backgroundColor: "#FD8D8C" }]}
+              onPress={onPress}
+            >
               <Text style={styles.text}>Out Time</Text>
             </Pressable>
           </View>

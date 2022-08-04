@@ -1,4 +1,12 @@
-import { View, Text, Image, LogBox, FlatList, Pressable, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  LogBox,
+  FlatList,
+  Pressable,
+  ScrollView,
+} from "react-native";
 import { useState, useEffect } from "react";
 import * as SecureStore from "expo-secure-store";
 import styles from "../styles/home";
@@ -48,14 +56,15 @@ export default function Teacherhome({ navigation }) {
       <ScrollView>
         <View
           style={{
+            padding: 10,
             marginTop: "25%",
             display: "flex",
             flexDirection: "row",
             // justifyContent: "space-around",
-            // flex: 1,
+            flex: 1,
+            justifyContent: "start",
             alignItems: "center",
             flexWrap: "wrap",
-            justifyContent: "center",
           }}
         >
           <NavItem
