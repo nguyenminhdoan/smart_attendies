@@ -148,7 +148,7 @@ export default function App() {
           name="ListClass"
           component={ListClass}
           options={{
-            title: "List Class",
+            title: "List Classes",
             headerStyle: {
               backgroundColor: colors.white,
             },

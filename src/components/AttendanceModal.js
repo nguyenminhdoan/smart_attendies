@@ -23,16 +23,19 @@ const AttendanceModal = ({
       <View style={styles.modal}>
         <View style={styles.modalItem}>
           <Text style={styles.modalItemTitle}>Total students: </Text>
-          <Text style={styles.modalItemValue}> {allStudentsId.length} </Text>
+          {/* <Text style={styles.modalItemValue}> {allStudentsId.length} </Text> */}
+          <Text style={styles.modalItemValue}> 30</Text>
         </View>
         <View style={styles.modalItem}>
           <Text style={styles.modalItemTitle}>Present students: </Text>
-          <Text style={styles.modalItemValue}> {presentStudents.length} </Text>
+          {/* <Text style={styles.modalItemValue}> {presentStudents.length} </Text> */}
+          <Text style={styles.modalItemValue}> 25 </Text>
         </View>
         <View style={styles.modalItem}>
           <Text style={styles.modalItemTitle}>Absent students: </Text>
           <Text style={styles.modalItemValue}>
-            {allStudentsId.length - presentStudents.length}
+            {/* {allStudentsId.length - presentStudents.length} */}
+            {5}
           </Text>
         </View>
 

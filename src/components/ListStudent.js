@@ -1,4 +1,12 @@
-import { Text, View, Image, Button, TouchableOpacity, Pressable, StyleSheet } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  Button,
+  TouchableOpacity,
+  Pressable,
+  StyleSheet,
+} from "react-native";
 import colors from "../../config/colors";
 import * as Animatable from "react-native-animatable";
 
@@ -14,8 +22,10 @@ const ListStudent = ({ onPress }) => {
         backgroundColor: colors.white,
         borderRadius: 10,
         marginTop: 20,
+        paddingBottom: 20,
         shadowOpacity: 0.3,
         shadowOffset: { width: 2, height: 1 },
+        height: "auto",
       }}
     >
       <View style={{ flexDirection: "row", marginTop: 20 }}>
@@ -23,13 +33,31 @@ const ListStudent = ({ onPress }) => {
           <Image source={require("../components/profile.png")} />
         </View>
         <View style={{ flexDirection: "column", marginLeft: 5 }}>
-          <Text style={{ color: colors.parentHome, fontFamily: "Poppins-Regular" }}>
-            List Student
+          <Text
+            style={{
+              color: colors.parentHome,
+              fontFamily: "Poppins-Regular",
+              maxWidth: 90,
+            }}
+          >
+            Nguyen Minh Doan
           </Text>
-          <Text style={{ fontSize: 10, marginTop: 3, fontFamily: "Poppins-Regular" }}>
+          <Text
+            style={{
+              fontSize: 10,
+              marginTop: 3,
+              fontFamily: "Poppins-Regular",
+            }}
+          >
             124123123
           </Text>
-          <Text style={{ marginTop: 3, fontSize: 10, fontFamily: "Poppins-Regular" }}>
+          <Text
+            style={{
+              marginTop: 3,
+              fontSize: 10,
+              fontFamily: "Poppins-Regular",
+            }}
+          >
             UI/UX Desinger
           </Text>
         </View>
@@ -38,12 +66,14 @@ const ListStudent = ({ onPress }) => {
           style={{
             backgroundColor: colors.gray,
             width: 1,
-            height: "90%",
+            height: "100%",
             marginLeft: 35,
           }}
         />
 
-        <View style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}>
+        <View
+          style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}
+        >
           <View style={{ marginRight: 10 }}>
             <Text style={styles.texttime}>09:00:00</Text>
             <Pressable style={styles.button} onPress={onPress}>
@@ -53,7 +83,10 @@ const ListStudent = ({ onPress }) => {
 
           <View>
             <Text style={styles.texttime}>17:09:38</Text>
-            <Pressable style={[styles.button, { backgroundColor: "red" }]} onPress={onPress}>
+            <Pressable
+              style={[styles.button, { backgroundColor: "#FD8D8C" }]}
+              onPress={onPress}
+            >
               <Text style={styles.text}>Out Time</Text>
             </Pressable>
           </View>

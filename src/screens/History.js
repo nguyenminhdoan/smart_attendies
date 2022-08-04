@@ -89,7 +89,7 @@ const History = ({ navigation }) => {
           <View style={{ flexDirection: "column" }}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <Text style={{ marginLeft: 20, color: colors.gray }}>
-                Cerrent Week
+                Current Week
               </Text>
               <View
                 style={{
