@@ -21,6 +21,8 @@ import History from "./src/screens/History";
 import StudentRegister from "./src/screens/StudentRegister";
 import StudentProfile from "./src/screens/StudentProfile";
 
+import 'react-native-gesture-handler';
+
 import TimeTable from "./src/screens/TimeTable";
 
 import Attendanceinfo from "./src/screens/Attendanceinfo";
