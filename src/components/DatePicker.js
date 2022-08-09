@@ -19,10 +19,6 @@ import { format } from "date-fns";
 function DatePickerCustom({ onPress }) {
   const [date, setDate] = useState(new Date());
 
-  function onPress() {
-    return date;
-  }
-
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
 
   const showDatePicker = () => {
