@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: "center",
+    fontFamily: "Poppins_400Regular",
   },
   btnAddCourse: {
     marginRight: 40,

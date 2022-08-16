@@ -19,7 +19,7 @@ import {
   faC,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectAllListClass } from "../features/listclass/listclassSlice";
 import { useState, useEffect, useCallback } from "react";
 import Modal from "react-native-modal";
@@ -32,37 +32,9 @@ import {
 import { TextInput } from "../components/common/TextInput";
 
 import DocumentPicker from "react-native-document-picker";
+import { addClass } from "../features/listclass/listclassSlice";
 
 const current = new Date().toLocaleDateString("en-GB");
-
-const DATA = [
-  {
-    title: "Synonyms & Antonyms",
-    major: "English",
-    date: current,
-    status: false,
-  },
-  { title: "OOP", major: "Science", date: current, status: true },
-  {
-    title: "Solar Sytem",
-    major: "Science",
-    date: current,
-    status: false,
-  },
-  {
-    title: "Security System",
-    major: "Science",
-    date: current,
-    status: false,
-  },
-  { title: "Solar Sytem", major: "Science", date: current, status: true },
-  {
-    title: "Data structor",
-    major: "Science",
-    date: current,
-    status: false,
-  },
-];
 
 //https://blog.logrocket.com/picking-files-react-native-apps-using-react-native-document-picker/
 const ListClass = ({ navigation }) => {
@@ -70,24 +42,50 @@ const ListClass = ({ navigation }) => {
 
   const [date, setDate] = useState(new Date());
 
+  const dispatch = useDispatch();
+
   const [isModalVisible, setModalVisible] = useState(false);
 
   const [singleFile, setSingleFile] = useState("");
   const [multipleFile, setMultipleFile] = useState([]);
-
   const [fileResponse, setFileResponse] = useState([]);
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
   };
 
-  const { ...methods } = useForm();
+  const { reset, ...methods } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    // console.log(data)
+    dispatch(
+      addClass({
+        title: data.title,
+        major: data.major,
+        date: current,
+        status: false,
+      })
+    );
+    reset({ title: "", major: "" });
+    alert("Add course success.");
+  };
 
   const onError = (errors, e) => {
     return console.log(errors);
   };
+
+  const handleDocumentSelection = useCallback(async () => {
+    try {
+      const response = await DocumentPicker.pick({
+        presentationStyle: "fullScreen",
+      });
+
+      console.log(response);
+      setFileResponse(response);
+    } catch (err) {
+      console.warn(err);
+    }
+  }, []);
 
   // File
   const selectOneFile = async () => {
@@ -135,19 +133,6 @@ const ListClass = ({ navigation }) => {
       }
     }
   };
-
-  const handleDocumentSelection = useCallback(async () => {
-    try {
-      const response = await DocumentPicker.pick({
-        presentationStyle: "fullScreen",
-      });
-
-      console.log(response);
-      setFileResponse(response);
-    } catch (err) {
-      console.warn(err);
-    }
-  }, []);
 
   const rederClass = ({ item }) => (
     <ButtonClass
@@ -224,22 +209,20 @@ const ListClass = ({ navigation }) => {
             <Modal isVisible={isModalVisible}>
               <View style={styles.centeredView}>
                 <View style={styles.modalView}>
-                  <Text style={styles.modalText}>Hello World!</Text>
+                  <Text style={styles.modalText}>Add Course</Text>
 
                   <FormProvider {...methods}>
                     <TextInput
-                      name="email"
-                      label="Email"
-                      placeholder="jon.doe@email.com"
-                      keyboardType="email-address"
-                      rules={{ required: "Email is required!" }}
+                      name="title"
+                      label="Title"
+                      placeholder="Makerting"
+                      // keyboardType="email-address"
                     />
                     <TextInput
-                      name="password"
-                      label="Password"
-                      placeholder="Password"
-                      secureTextEntry
-                      rules={{ required: "Password is required!" }}
+                      name="major"
+                      label="Major"
+                      placeholder="Business"
+                      // secureTextEntry
                     />
                   </FormProvider>
 

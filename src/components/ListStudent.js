@@ -10,7 +10,8 @@ import {
 import colors from "../../config/colors";
 import * as Animatable from "react-native-animatable";
 
-const ListStudent = ({ onPress }) => {
+const ListStudent = (props) => {
+  const { name, id, job, onPress } = props;
   return (
     <Animatable.View
       animation={"fadeInDown"}
@@ -40,7 +41,7 @@ const ListStudent = ({ onPress }) => {
               maxWidth: 90,
             }}
           >
-            Nguyen Minh Doan
+            {name}
           </Text>
           <Text
             style={{
@@ -49,7 +50,7 @@ const ListStudent = ({ onPress }) => {
               fontFamily: "Poppins-Regular",
             }}
           >
-            124123123
+            {id}
           </Text>
           <Text
             style={{
@@ -58,7 +59,7 @@ const ListStudent = ({ onPress }) => {
               fontFamily: "Poppins-Regular",
             }}
           >
-            UI/UX Desinger
+            {job}
           </Text>
         </View>
 
@@ -76,7 +77,10 @@ const ListStudent = ({ onPress }) => {
         >
           <View style={{ marginRight: 10 }}>
             <Text style={styles.texttime}>09:00:00</Text>
-            <Pressable style={styles.button} onPress={onPress}>
+            <Pressable
+              style={styles.button}
+              onPress={() => console.log("In Time")}
+            >
               <Text style={styles.text}>In Time</Text>
             </Pressable>
           </View>
